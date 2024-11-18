@@ -33,15 +33,23 @@ io.on("connection", (socket) =>{
     SocketHandler(socket);
 })
 
-
+const mongoURI="mongodb+srv://sample:sample@mern.vxncu.mongodb.net/Freelancing?retryWrites=true&w=majority&appName=MERN"
 const PORT = 6001;
-mongoose.connect("mongodb+srv://narmatham373:testing@mern.vxncu.mongodb.net/Freelancing?retryWrites=true&w=majority&appName=MERN").then(()=>
-{
-    console.log("Db connected")
-}).catch((error)=>
-{
-    console.log(error.message)
-})
+// mongoose.connect("mongodb+srv://newuser:testing@mern.vxncu.mongodb.net/Free?retryWrites=true&w=majority&appName=MERN").then(()=>
+// {
+//     console.log("Db connected")
+// }).catch((error)=>
+// {
+//     console.log(error.message)
+// })
+mongoose.connect(mongoURI)
+  .then(() => {
+    console.log("DB connected");
+  })
+  .catch((error) => {
+    console.log("DB connection error:", error.message);
+  });
+
 // mongoose.connect('mongodb+srv://narmatham373:narmatha@2003@mern.vxncu.mongodb.net/?retryWrites=true&w=majority&appName=MERN',{
 //     useNewUrlParser: true,
 //     useUnifiedTopology: true

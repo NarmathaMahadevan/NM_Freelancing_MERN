@@ -26,7 +26,7 @@ const Landing = () => {
         <div className="landing-hero">
 
             <div className='landing-nav'>
-              <h3>SB Works</h3>
+              <h3>FreeLancing MERN</h3>
               <button onClick={()=> navigate('/authenticate')} >Sign In</button>
             </div>
 
